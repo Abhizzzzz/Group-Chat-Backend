@@ -119,7 +119,7 @@ let setServer = (server) =>{
                             // we are broadcasting it to other users who are online and why we need to write emit is
                             // because broadcast just notifies to other users but does'nt notify us that's why we are writing two statements
                             socket.emit('online-group-list',result);
-                            // socket.broadcast.emit('online-group-list',result);
+                            socket.broadcast.emit('online-group-list',result);
                         }
                     });
                 }
@@ -139,7 +139,7 @@ let setServer = (server) =>{
                         // we are broadcasting it to other users who are online and why we need to write emit is
                         // because broadcast just notifies to other users but does'nt notify us that's why we are writing two statements
                         socket.emit('online-group-list',result);
-                        // socket.broadcast.emit('online-group-list',result);
+                        socket.broadcast.emit('online-group-list',result);
                     }
                 });
             }
